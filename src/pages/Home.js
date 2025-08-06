@@ -1,0 +1,569 @@
+import React from "react";
+import { IoChatbubblesOutline } from "react-icons/io5";
+import {
+    MdOutlineDevices,
+    MdOutlineSystemUpdateAlt,
+    MdOutlineAnalytics,
+    MdOutlineSmartToy,
+    MdOutlineCloudQueue,
+    MdOutlineSecurity,
+} from "react-icons/md";
+import { LuDatabase } from "react-icons/lu";
+import { LuShield } from "react-icons/lu";
+import { LiaBrainSolid } from "react-icons/lia";
+import { CgDatabase } from "react-icons/cg";
+import { TbCloudCog } from "react-icons/tb";
+import { TiArrowRight } from "react-icons/ti";
+import { LuMicroscope } from "react-icons/lu";
+import { RiBankLine } from "react-icons/ri";
+import { LuShoppingCart } from "react-icons/lu";
+import { RiGraduationCapLine } from "react-icons/ri";
+import { LuTruck } from "react-icons/lu";
+import { MdArrowForwardIos } from "react-icons/md";
+import { LuFactory } from "react-icons/lu";
+import { CiLocationOn } from "react-icons/ci";
+import { FiPhone } from "react-icons/fi";
+function Home() {
+    return (
+        <>
+            {/* first section */}
+            <div
+                className="h-screen flex flex-col items-center justify-center bg-cover bg-center"
+                style={{ backgroundImage: `url(/bg.png)` }}
+            >
+                <div className="flex pt-[60px] flex-col items-center space-y-[50px] justify-center">
+                    <h1 className="text-5xl tracking-wider font-aeion text-center text-white drop-shadow-2xl font-bold px-10 sm:px-[160px]">
+                        TRANSFORM LEGACY SYSTEMS INTO MODERN ENTERPRISE SOLUTIONS
+                    </h1>
+                    <span className="bg-purple-800 text-white text-base font-aeion px-10 py-4 rounded-full cursor-pointer hover:bg-blue-800 transition duration-300">
+                        Get a free Consultation
+                    </span>
+                </div>
+
+                {/* Chat Icon */}
+                <div className="absolute bottom-5 right-5 bg-blue-600 text-white p-4 rounded-full text-3xl cursor-pointer hover:bg-blue-800 transition duration-300">
+                    <IoChatbubblesOutline />
+                </div>
+            </div>
+
+            {/* Second Section */}
+            <div>
+                <h1 className="text-[65px] leading-tight py-[100px] px-[80px] font-semibold font-aeion tracking-wider text-left">
+                    Revitalize your business with scalable, secure, and efficient enterprise applications designed for the digital age.
+                </h1>
+            </div>
+
+            {/* third section */}
+
+            <div className="bg-gray-100 flex flex-col justify-center space-y-14 items-center py-[40px] px-4">
+                <div className="max-w-7xl w-full flex flex-col justify-center items-center text-center">
+                    <h1 className="text-[55px] tracking-wider font-semibold font-aeion">Services</h1>
+                    <p className="text-gray-400 text-lg max-w-2xl">
+                        We deliver end-to-end software solutions that solve complex business challenges and drive digital transformation.
+                    </p>
+                </div>
+
+                {/* Cards Grid */}
+                <div className="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {[
+                        {
+                            title: "Web & Mobile App Development",
+                            desc: "Custom web and mobile applications tailored to your business needs",
+                            icon: <MdOutlineDevices size={20} className="text-blue-500" />,
+                            image: "/img1.jpg",
+                        },
+                        {
+                            title: "Enterprise Software Modernization",
+                            desc: "Transform legacy systems into cutting-edge digital solutions",
+                            icon: <CgDatabase size={20} className="text-blue-500" />,
+                            image: "/img2.jpg",
+                        },
+                        {
+                            title: "Data Analytics & BI",
+                            desc: "Extract valuable insights from your data for informed decisions",
+                            icon: <LuDatabase size={20} className="text-red-500" />,
+                            image: "/img3.jpg",
+                        },
+                        {
+                            title: "AI & Emerging Tech",
+                            desc: "Stay ahead with artificial intelligence and emerging technologies",
+                            icon: <LiaBrainSolid size={20} className="text-orange-500" />,
+                            image: "/img4.jpg",
+                        },
+                        {
+                            title: "Cloud & DevOps",
+                            desc: "Optimize infrastructure with cloud computing and DevOps practices",
+                            icon: <TbCloudCog size={20} className="text-blue-500" />,
+                            image: "/img5.jpg",
+                        },
+                        {
+                            title: "Cybersecurity & QA",
+                            desc: "Protect your digital assets and ensure software quality",
+                            icon: <LuShield size={20} className="text-red-500" />,
+                            image: "/img6.jpg",
+                        },
+                    ].map((item, idx) => (
+                        <div
+                            key={idx}
+                            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition"
+                        >
+                            {/* Image section */}
+                            <div
+                                className="h-48 bg-cover bg-center relative"
+                                style={{ backgroundImage: `url(${item.image})` }}
+                            >
+                                {/* Purple Overlay */}
+                                <div className="absolute inset-0 bg-purple-700/70 mix-blend-overlay brightness-110"></div>
+
+                                {/* Gradient Overlay from bottom */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent p-4 text-white flex flex-col justify-end">
+                                    <div className="flex  items-center gap-2 font-semibold">
+                                        <span style={{ backgroundColor: "#D9D9D9" }} className="p-2 rounded-full">
+                                            {item.icon}
+                                        </span>
+                                        <span>{item.title}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            {/* Text Section */}
+                            <div className="p-5">
+                                <p className="text-gray-400 mb-4">{item.desc}</p>
+                                <span className="text-blue-600 font-medium cursor-pointer hover:underline flex items-center gap-1">
+                                    Learn More →
+                                </span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <h1 className="bg-gray-50 border border-gray-200 px-5 font-normal py-1 hover:bg-gray-200 rounded-full transition cursor-pointer">View All Services</h1>
+            </div>
+
+            {/* fourth section */}
+            <div className="py-[100px] px-[80px]">
+                <h1 className="text-[60px]   font-semibold font-aeion text-left leading-tight tracking-wider">LiveUpX</h1>
+                <h1 className="text-[60px] leading-tight font-semibold font-aeion tracking-wider text-left">
+                    provides full-cycle software development, AI solutions, cloud & DevOps, cybersecurity, and data analytics services for modern enterprises across Europe.
+                </h1>
+
+            </div>
+
+            {/* fifth section */}
+            <div className="bg-gray-100 flex flex-col justify-center space-y-14 items-center py-[80px] px-4">
+                <div className="max-w-7xl w-full flex flex-col justify-center items-center text-center">
+                    <h1 className="text-[55px] font-semibold tracking-wider font-aeion mb-4">By the numbers</h1>
+                    <p className="text-gray-400 text-lg font-normal max-w-2xl">
+                        Delivering exceptional solutions across the globe with proven results and satisfied clients.
+                    </p>
+                </div>
+
+                {/* Cards Grid */}
+                {/* Cards Grid */}
+                <div className="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {[
+                        {
+                            number: "17+",
+                            title: "Countries with Global Presence",
+                        },
+                        {
+                            number: "600+",
+                            title: "Successfully Delivered Projects",
+                        },
+                        {
+                            number: "12+",
+                            title: "Years of Industry Experience",
+                        },
+                        {
+                            number: "96%",
+                            title: "Client Retention Rate",
+                        },
+                    ].map((item, idx) => (
+                        <div
+                            key={idx}
+                            className="bg-white rounded-2xl overflow-hidden p-8 shadow-md flex flex-col items-center justify-center text-center relative"
+                        >
+                            {/* Purple semi-circle corner */}
+                            <div className="absolute top-0 left-0 w-9 h-9 bg-purple-600 rounded-br-full"></div>
+
+                            <h2 className="text-6xl font-bold text-purple-700 mb-4">{item.number}</h2>
+                            <p className="text-gray-400 font-medium">{item.title}</p>
+                        </div>
+
+
+                    ))}
+                </div>
+
+                <p className="text-gray-400 text-lg text-center font-normal max-w-2xl">Our global team delivers exceptional solutions and maintains an industry-leading client satisfaction rate, powering digital transformation across 17+ countries.</p>
+            </div>
+
+
+            {/* sixth section */}
+            <div className=" flex flex-col justify-center space-y-14 items-center py-[80px] px-4">
+                <div className="max-w-[1050px] w-full flex flex-col justify-center items-center text-center">
+                    <h1 className="text-[55px] tracking-wider font-semibold font-aeion mb-4">Why Liveupx</h1>
+                    <p className="text-gray-400  text-lg font-normal max-w-2xl">
+                        We combine technical excellence with strategic insight to deliver solutions that drive business growth.
+                    </p>
+                </div>
+
+                {/* Cards Grid */}
+                <div className="max-w-[1220px] w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {[
+                        {
+                            title: "Deep Expertise",
+                            description: "Our team consists of seasoned professionsls with expertise across various domains and technologies.",
+                        },
+                        {
+                            title: "Enterprise-Grade Security",
+                            description: "We implement rigorous security protocols to safeguard your sensitive data and intellectual property.",
+                        },
+                        {
+                            title: "Innovative Solutions",
+                            description: "We leverage cutting-edge technologies to deliver innovative and future-proof solutions",
+                        },
+                        {
+                            title: "Timely Delivery",
+                            description: "We pride ourselves on meeting deadlines without compromising on quality or functionality",
+                        },
+                        {
+                            title: "Scalable Architecture",
+                            description: "Our solutions are designed to grow with your business, ensuring long-term sustainability",
+                        },
+                        {
+                            title: "Transparent Communication",
+                            description: "We maintain clear and open communication throughout the project lifecycle.",
+                        },
+                        {
+                            title: "Global Perspective",
+                            description: "With experience across 17-countries, we bring diverse perspectives to solve complex challenges.",
+                        },
+                        {
+                            title: "Client-Centric Approach",
+                            description: "Your success is our priority, and we tailor our solutions to meet your specific needs",
+                        },
+                    ].map((item, idx) => (
+                        <div
+                            key={idx}
+                            // style={{ backgroundColor: "#fbfbfb" }}
+                            className="rounded-2xl bg-gradient-to-t from-[#fbfbfb] via-[#fbfbfb] to-white overflow-hidden p-6 shadow-lg flex flex-col items-start justify-start text-left relative hover:shadow-xl transition duration-300"
+                        >
+                            <div className="mb-4 p-4 bg-purple-100 rounded-xl">
+                                <LuShield size={28} className="text-purple-700" />
+                            </div>
+                            <h3 className="text-xl font-semibold text-black mb-2">{item.title}</h3>
+                            <p className="text-gray-400 text-[15px]">{item.description}</p>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+
+
+            {/* seventh section */}
+            <div>
+                <h1 className="text-[65px] bg-gray-100 leading-tight py-[80px] px-[80px] font-semibold font-aeion text-left">
+                    Liveupx is a global IT services, consulting, and business solutions organization helping enterprises navigate their digital transformation.
+                </h1>
+
+            </div>
+
+            {/* eighth section */}
+            <div className="flex flex-col justify-center space-y-14 items-center py-[60px] px-4">
+                <div className="max-w-7xl w-full flex flex-col justify-center items-center text-center">
+                    <h1 className="text-[55px] tracking-wider font-semibold font-aeion">Industries</h1>
+                    <p className="text-gray-400 text-lg max-w-2xl">
+                        We deliver customized digital solutions to address unique challenges across various industries.
+                    </p>
+                </div>
+
+                {/* Cards Grid */}
+                <div className="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {[
+                        {
+                            title: "Healthcare & Life Sciences",
+                            desc: "Digital solutions transforming patient care and medical research",
+                            icon: <LuMicroscope size={20} className="text-blue-500" />,
+                            image: "/img7.jpg",
+                        },
+                        {
+                            title: "Fintech & Banking",
+                            desc: "Innovative financial technology solutions for the digital age",
+                            icon: <RiBankLine size={20} className="text-red-500" />,
+                            image: "/img9.jpg",
+                        },
+                        {
+                            title: "E-Commerse & Retail",
+                            desc: "Advanced platforms for exceptional digital retail experiences",
+                            icon: <LuShoppingCart size={20} className="text-blue-500" />,
+                            image: "/img8.jpg",
+                        },
+                        {
+                            title: "EdTech & Workspace",
+                            desc: "Learning platforms revolutionizing education and training",
+                            icon: <RiGraduationCapLine size={20} className="text-red-500" />,
+                            image: "/img7.jpg",
+                        },
+                        {
+                            title: "Logistics & Supply Chain",
+                            desc: "Smart supply chain and transportation management solutions",
+                            icon: <LuTruck size={20} className="text-blue-500" />,
+                            image: "/img7.jpg",
+                        },
+                        {
+                            title: "Smart Manufacturing",
+                            desc: "IoT and digital transformation for smart factories",
+                            icon: <LuFactory size={20} className="text-red-500" />,
+                            image: "/img7.jpg",
+                        },
+                    ].map((item, idx) => (
+                        <div
+                            key={idx}
+                            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition"
+                        >
+                            {/* Image section */}
+                            <div
+                                className="h-48 bg-cover bg-center relative"
+                                style={{ backgroundImage: `url(${item.image})` }}
+                            >
+                                {/* Purple Overlay */}
+                                <div className="absolute inset-0 bg-purple-700/70 mix-blend-overlay brightness-110"></div>
+
+                                {/* Gradient Overlay from bottom */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent p-4 text-white flex flex-col justify-end">
+                                    <div className="flex  items-center gap-2 font-semibold">
+                                        <span style={{ backgroundColor: "#D9D9D9" }} className="p-2 rounded-full">
+                                            {item.icon}
+                                        </span>
+                                        <span>{item.title}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            {/* Text Section */}
+                            <div className="p-5 bg-gray-100">
+                                <p className="text-gray-400 mb-4">{item.desc}</p>
+                                <span className="text-blue-600 font-medium cursor-pointer hover:underline flex items-center gap-1">
+                                    Learn More →
+                                </span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <span className="bg-gray-50 border flex flex-row items-center gap-2 border-gray-200 px-5 font-normal py-2 hover:bg-gray-200 rounded-full transition cursor-pointer">
+                    <h1 className="font-medium text-sm">View All Industry Solutions</h1>
+                    <span className="text-2xl"><TiArrowRight /></span>
+                </span>
+            </div>
+
+            {/* ninth section */}
+            {/* ninth section - Trusted by Industry Leaders */}
+            <div className="bg-gray-100 h-[650px] flex flex-col justify-center space-y-14 items-center py-[80px] px-4">
+                <div className="max-w-[1050px] w-full flex flex-col justify-center items-center text-center">
+                    <h1 className="text-[50px] tracking-wider font-semibold font-aeion">Trusted by Industry Leaders</h1>
+                    <p className="text-gray-500 text-lg font-normal max-w-2xl">
+                        We've partnered with innovative organizations across multiple industries to deliver exceptional digital solutions.
+                    </p>
+                </div>
+
+                {/* Company Logos Strip */}
+                <div className="w-full max-w-[1220px] bg-gradient-to-r from-gray-100 to-white p-10 shadow-xl overflow-x-auto">
+                    <div className="flex flex-row gap-8 items-center justify-between min-w-[800px] sm:min-w-0">
+                        {[
+                            { src: "/img1.jpg", alt: "Scholar IAS" },
+                            { src: "/img2.jpg", alt: "Rare & Minted" },
+                            { src: "/img3.jpg", alt: "Conekto" },
+                            { src: "/img4.jpg", alt: "Takeoff" },
+                            { src: "/img5.jpg", alt: "RidePlus" },
+                        ].map((logo, idx) => (
+                            <div key={idx} className="bg-white overflow-hidden shadow-md rounded-xl  flex items-center justify-center h-[100px] w-[200px]">
+                                <img
+                                    src={logo.src}
+                                    alt={logo.alt}
+                                    className="h-full w-full object-cover grayscale hover:grayscale-0 transition duration-300"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+
+            {/* tenth section */}
+            <div className="flex h-[640px] flex-col justify-center space-y-14 items-center py-[80px] px-4 bg-gradient-to-b from-white via-[#d8b4fe] to-[#a855f7]">
+                <div className="max-w-[1050px] w-full flex flex-col justify-center items-center text-center">
+                    <h1 className="text-[45px] tracking-wider font-semibold font-aeion mb-4">
+                        Connect with us
+                    </h1>
+                    <p className="text-gray-600 text-lg font-normal max-w-2xl">
+                        We're here to help. Contact us today to discuss your project, request a quote, or learn more about our services.
+                    </p>
+                </div>
+
+                <span className="bg-[#714cc9] text-white text-base font-aeion px-20 py-4 rounded-full cursor-pointer hover:bg-[#7c3aed] transition duration-300">
+                    Get in touch
+                </span>
+            </div>
+
+            {/* eleventh section - Footer */}
+            <footer className="bg-gray-100 text-gray-400 text-base px-8 pt-12 pb-[50px] border-t">
+                <div className="max-w-10xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+
+
+                    {/* Company Info */}
+                    <div className="space-y-7 col-span-2">
+
+                        <img src="/logo.png" alt="Liveupx" className="h-14 " />
+                        <p>
+                            Liveupx is a global IT services, consulting, and business solutions organization helping enterprises navigate their digital transformation.
+                        </p>
+
+                        <div className="space-y-4">
+                            <p className="flex items-center gap-2">
+                                <span className="text-xl text-gray-600">
+                                    <CiLocationOn />
+                                </span>
+                                F86G+92X, Knowledge Park I, Greater Noida, Uttar Pradesh 201310, India
+                            </p>
+                            <p className="flex items-center gap-2">
+                                <span className="text-lg text-gray-600">
+                                    <FiPhone />
+                                </span>
+                                +91-70603-71701
+                            </p>
+                        </div>
+                        <div className="space-y-4">
+                            <p>✉ help@liveupx.com</p>
+                            <p>✉ info@liveupx.com</p>
+                        </div>
+                    </div>
+
+                    {/* What We Do */}
+                    <div className="space-y-7">
+                        <h4 className="font-semibold text-black">What We Do</h4>
+                        {[
+                            "Digital Transformation",
+                            "Enterprise Software",
+                            "Legacy Migration",
+                            "AI & Emerging Tech",
+                            "Generative AI",
+                            "Blockchain & Web3",
+                            "Web & Mobile Apps",
+                            "Cloud & DevOps",
+                        ].map((item, i) => (
+                            <p key={i} className="flex items-center gap-2 hover:text-purple-700 cursor-pointer">
+                                <MdArrowForwardIos className="text-xs mt-[2px]" />
+                                <span>{item}</span>
+                            </p>
+                        ))}
+                    </div>
+
+                    {/* Industries */}
+                    <div className="space-y-7">
+                        <h4 className="font-semibold text-black">Industries</h4>
+                        {[
+                            "Healthcare",
+                            "Fintech",
+                            "E-commerce",
+                            "EdTech",
+                            "Logistics",
+                            "Manufacturing",
+                            "Media & Entertainment",
+                            "CleanTech",
+                        ].map((item, i) => (
+                            <p key={i} className="flex items-center gap-2 hover:text-purple-700 cursor-pointer">
+                                <MdArrowForwardIos className="text-xs mt-[2px]" />
+                                <span>{item}</span>
+                            </p>
+                        ))}
+                    </div>
+
+                    <div className="space-y-7">
+                        <h4 className="font-semibold text-black">Who We Are</h4>
+                        {[
+                            "Vision & Mission",
+                            "Global Presence",
+                            "Leadership",
+                            "Awards & Recognition",
+                            "Working Process",
+                            "Our Portfolio",
+                            "Client Login",
+                            "Raise a Ticket",
+                        ].map((item, i) => (
+                            <p key={i} className="flex items-center gap-2 hover:text-purple-700 cursor-pointer">
+                                <MdArrowForwardIos className="text-xs mt-[2px]" />
+                                <span>{item}</span>
+                            </p>
+                        ))}
+                    </div>
+
+                    {/* Careers / Others */}
+                    <div className="space-y-7">
+                        <h4 className="font-semibold text-black">Insights</h4>
+                        {[
+                            "Blog",
+                            "Case Studies",
+                            "Whitepapers",
+                            "Events",
+                        ].map((item, i) => (
+                            <p key={i} className="flex items-center gap-2 hover:text-purple-700 cursor-pointer">
+                                <MdArrowForwardIos className="text-xs mt-[2px]" />
+                                <span>{item}</span>
+                            </p>
+                        ))}
+
+                        <h4 className="font-semibold text-black">Careers</h4>
+                        {[
+                            "Open Positions",
+                            "Culture & Benefits",
+                            "Internships",
+                            "Life at Liveupx",
+                        ].map((item, i) => (
+                            <p key={i} className="flex items-center gap-2 hover:text-purple-700 cursor-pointer">
+                                <MdArrowForwardIos className="text-xs mt-[2px]" />
+                                <span>{item}</span>
+                            </p>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Bottom Section */}
+                <hr className="border-t border-gray-300 my-8" />
+
+                <div className="max-w-7xl mx-auto  flex flex-col md:flex-row items-center justify-between  space-y-4 md:space-y-0">
+                    <div className="space-y-2">
+                        <h1 className="text-gray-600 text-[14px]">© 2025 All rights are reserved by Liveupx Private Limited</h1>
+                        <span className="flex text-gray-400 flex-row gap-4">
+                            <h1>Registration Nu:136527</h1>
+                            <h1>CIN: 072200UP2020PTC136527</h1>
+                        </span>
+                    </div>
+                    <div className="flex gap-4 text-[14px]">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Sales policy</a>
+                        <a href="#">Legal</a>
+                        <a href="#">Site Map</a>
+                    </div>
+                </div>
+                <hr className="border-t border-gray-300 my-8" />
+
+                <div className="space-y-3">
+                    <p>
+                        <span className="text-gray-600">Disclaimer:</span> The information provided on this website is for general informational purposes-only While we strive to keep the information up to date and accurate, we mitike no representations or warranties of any kund, express or implied, about the completeness, accuracy, reliablity, surability, or avaliability with respect to the website or the information, products, services, or resated graphics contained on the website for any purpose. Any relance you place on such information is therefore strictly at your own risk. In no event will wit be liable for any loss or damage including without limitation, indirect or consequential loss or damage or any loss or damage whatsoever artung from lous of data or profits artung out of or in connection with, the use of this website.
+                    </p>
+                    <p>
+                        Through this website, you may be able to link to other websites which are not under the control of Liveups Private Limited. We have no control over the nature, content and availability of these sites. The inclusion of any inte does not necessarily imply a recommendation or endorse the views expressed within them. Every effort is made to keep the website up and running smoothly. However, Liviupx Private Larsted takes no responsibility tor, and will not be hatile foc thi website being temporarily unavallatile due to technical issues beyond our control.
+                    </p>
+                </div>
+
+            </footer>
+
+        </>
+    );
+}
+
+export default Home;
