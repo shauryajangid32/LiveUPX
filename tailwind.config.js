@@ -14,7 +14,16 @@ module.exports = {
         dmsans: ["DM Sans", "sans-serif"],
         bigshoulders: ["Big Shoulders Display", "cursive"],
         opensans: ["Open Sans", "sans-serif"],
-        aeion: ['AeionMono', 'monospace'], 
+        aeion: ['AeionMono', 'monospace'],
+      },
+      animation: {
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
+        },
       },
     },
   },
