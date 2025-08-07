@@ -417,7 +417,7 @@ function Home() {
                                         "/logos/alfacare.png",
                                         "/logos/bharatcore.png",
                                         "/logos/cloud.png",
-                                        "/logos/coneKtto.png",
+                                        "/logos/conektto.png",
                                         "/logos/foxx.png",
                                         "/logos/ikea.png",
                                         "/logos/mentorji.png",
