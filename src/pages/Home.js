@@ -23,7 +23,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { LuFactory } from "react-icons/lu";
 import { CiLocationOn } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
-
+import { MdOutlineMailOutline } from "react-icons/md";
 function Home() {
     // Scroll to section function
     const scrollToSection = (id) => {
@@ -40,27 +40,35 @@ function Home() {
                 id="home"
                 className="h-screen max-w-screen flex flex-col items-center justify-center bg-cover bg-center"
                 style={{ backgroundImage: `url(/bgg.png)` }}
-            >   
-                <div className="flex pt-[60px] flex-col items-center md:space-y-[50px] space-y-[70px] justify-center">
-                    <h1 className="xl:text-[50px] xl:max-w-5xl md:text-4xl text-3xl font-aeion text-center text-white drop-shadow-xl font-bold px-10 sm:px-[16px] xl:space-y-3">
+            >
+                <div className="flex pt-[40px] flex-col items-center md:space-y-[50px] space-y-[70px] justify-center">
+                    <h1 className="xl:text-[55px] text-shadow-lg xl:max-w-5xl md:text-4xl text-3xl font-aeion text-center text-white drop-shadow-xl font-bold px-10 sm:px-[16px] xl:space-y-3">
                         <h1>TRANSFORM LEGACY SYSTEMS INTO</h1> <h1>MODERN ENTERPRISE SOLUTIONS</h1>
                     </h1>
-                    <span 
+                    <span
                         onClick={() => scrollToSection('contact')}
-                        className="bg-purple-700 md:hover:shadow-xl text-white text-base font-aeion px-10 py-4 rounded-full cursor-pointer md:hover:bg-blue-800 transition duration-300"
+                        className="bg-purple-700 md:hover:shadow-xl text-white text-base font-aeion px-10 py-4 rounded-full cursor-pointer md:hover:bg-purple-800 transition duration-300"
                     >
                         Get a free Consultation
                     </span>
                 </div>
 
                 {/* Chat Icon */}
-                <div className="fixed z-[9999] bottom-5 right-5 bg-blue-600 text-white p-4 rounded-full text-3xl cursor-pointer hover:bg-blue-800 transition duration-300">
+                <div className="fixed z-[9999] bottom-5 md:hover:shadow-xl right-5 bg-purple-700 text-white p-4 rounded-full xl:text-3xl text-xl cursor-pointer hover:bg-purple-800 transition duration-300">
                     <IoChatbubblesOutline />
+                </div>
+                <div
+                    className="fixed z-[9999] bottom-24 md:hover:shadow-xl right-5 bg-purple-700 text-white p-4 rounded-full xl:text-3xl text-xl cursor-pointer hover:bg-purple-800 transition duration-300"
+                    onClick={() => window.location.href = "tel:+4917671523951"}
+                    title="Call +49 176 7152 3951"
+                    aria-label="Call customer support"
+                >
+                    <FiPhone />
                 </div>
             </div>
 
             {/* Second Section - About */}
-            <h1 
+            <h1
                 id="about"
                 className="xl:text-[65px] md:text-[50px] max-w-screen leading-10 text-center text-[25px] md:h-screen md:leading-tight md:py-[100px] md:px-[80px] px-[20px] py-[50px] font-semibold font-aeion md:tracking-wider xl:text-left flex items-center md:justify-center"
             >
@@ -68,11 +76,11 @@ function Home() {
             </h1>
 
             {/* third section - Services */}
-            <div 
+            <div
                 id="services"
                 className="bg-gray-100 max-w-screen flex flex-col justify-center space-y-14 items-center md:py-[40px] md:px-4 px-[20px] py-[50px]"
             >
-                <div className="max-w-7xl w-full flex flex-col justify-center items-center text-center">
+                <div className="w-full flex flex-col justify-center items-center text-center xl:space-y-5">
                     <h1 className="xl:text-[55px] md:text-[40px] text-[25px] xl:tracking-wider font-semibold font-aeion">Services</h1>
                     <p className="text-gray-400 xl:text-lg md:text-sm text-xs max-w-2xl">
                         We deliver end-to-end software solutions that solve complex business challenges and drive digital transformation.
@@ -121,7 +129,7 @@ function Home() {
                     ].map((item, idx) => (
                         <div
                             key={idx}
-                            className="bg-white rounded-2xl border overflow-hidden md:hover:shadow-xl shadow-xl md:shadow-none md:transform md:transition-transform md:duration-300 md:hover:scale-105"
+                            className="bg-white cursor-pointer rounded-2xl border overflow-hidden md:hover:shadow-xl shadow-xl md:shadow-none md:transform md:transition-transform md:duration-300 md:hover:scale-105"
                         >
                             {/* Image section */}
                             <div
@@ -168,7 +176,7 @@ function Home() {
             </div>
 
             {/* fifth section - Portfolio */}
-            <div 
+            <div
                 id="portfolio"
                 className="bg-gray-100 max-w-screen flex flex-col justify-center md:space-y-14 space-y-5 items-center md:py-[80px] py-[50px] px-[20px] md:px-4"
             >
@@ -201,7 +209,7 @@ function Home() {
                     ].map((item, idx) => (
                         <div
                             key={idx}
-                            className="bg-white border rounded-2xl md:transform md:transition-transform md:duration-300 md:hover:scale-105 overflow-hidden md:p-8 p-4 md:hover:shadow-xl flex flex-col items-center justify-center text-center relative"
+                            className="bg-white border cursor-pointer rounded-2xl md:transform md:transition-transform md:duration-300 md:hover:scale-105 overflow-hidden md:p-8 p-4 md:hover:shadow-xl flex flex-col items-center justify-center text-center relative"
                         >
                             {/* Purple semi-circle corner */}
                             <div className="absolute top-0 left-0 md:w-9 md:h-9 w-7 h-7 bg-purple-600 rounded-br-full"></div>
@@ -218,7 +226,7 @@ function Home() {
             </div>
 
             {/* sixth section - Case Studies */}
-            <div 
+            <div
                 id="case-studies"
                 className="flex flex-col max-w-screen justify-center md:space-y-14 space-y-5 items-center md:py-[80px] md:px-4 px-[20px] py-[50px]"
             >
@@ -258,7 +266,7 @@ function Home() {
                         },
                         {
                             title: "Global Perspective",
-                            description: "With experience across 17-countries, we bring diverse perspectives to solve complex challenges.",
+                            description: "With experience across 17+ countries, we bring diverse perspectives to solve complex challenges.",
                         },
                         {
                             title: "Client-Centric Approach",
@@ -287,12 +295,12 @@ function Home() {
             </div>
 
             {/* eighth section - About */}
-            <div 
+            <div
                 id="about-company"
                 className="flex flex-col max-w-screen justify-center md:space-y-14 space-y-8 items-center md:py-[60px] py-[50px] px-[20px]"
             >
                 {/* Heading */}
-                <div className="w-full flex flex-col justify-center items-center text-center xl:space-y-4">
+                <div className="w-full flex flex-col justify-center items-center text-center xl:space-y-5">
                     <h1 className="xl:text-[55px] md:text-[40px] text-2xl tracking-wider font-semibold font-aeion">
                         Industries
                     </h1>
@@ -386,8 +394,8 @@ function Home() {
             <div className="bg-gray-100 md:h-screen max-w-screen flex items-center justify-center md:px-4 px-[20px] py-[50px]">
                 <div className="md:space-y-14 space-y-8 md:flex md:flex-col items-center justify-center w-full">
                     {/* Header Section */}
-                    <div className="md:max-w-[1050px] w-full flex flex-col md:gap-5 justify-center items-center text-center px-2">
-                        <h1 className="text-sm md:text-[40px] text-nowrap xl:text-[50px] font-semibold font-aeion xl:tracking-wider">
+                    <div className=" w-full flex flex-col xl:space-y-5 justify-center items-center text-center px-2">
+                        <h1 className="text-sm md:text-[40px] xl:text-[50px] font-semibold font-aeion xl:tracking-wider">
                             Trusted by Industry Leaders
                         </h1>
                         <p className="text-gray-500 text-xs md:text-sm xl:text-lg font-normal max-w-2xl">
@@ -459,7 +467,7 @@ function Home() {
                                             key={`${i}-${idx}`}
                                             className="mx-4 w-[150px] sm:w-[200px] shrink-0"
                                         >
-                                            <div className="bg-slate-200 overflow-hidden shadow-xl rounded-xl flex items-center justify-center h-[80px] sm:h-[100px] transform transition-transform duration-300 hover:scale-105">
+                                            <div className="bg-white cursor-pointer overflow-hidden shadow-md hover:shadow-xl rounded-xl flex items-center justify-center h-[80px] sm:h-[100px] transform transition-transform duration-300 hover:scale-105">
                                                 <img
                                                     src={logoPath}
                                                     alt="Company logo"
@@ -476,7 +484,7 @@ function Home() {
             </div>
 
             {/* tenth section - Contact */}
-            <div 
+            <div
                 id="contact"
                 className="flex md:h-screen max-w-screen flex-col justify-center space-y-14 items-center md:py-[80px] py-[50px] md:px-4 px-[20px] bg-gradient-to-b from-white via-[#d8b4fe] to-[#a855f7]"
             >
@@ -495,37 +503,45 @@ function Home() {
             </div>
 
             {/* eleventh section - Footer */}
-            <footer className="bg-gray-100 max-w-screen text-gray-400 md:text-base md:px-4 px-[20px] md:pt-12 py-[20px] md:pb-[50px] border-t">
+            <footer className="bg-gray-100 space-y-10 max-w-screen text-gray-400 md:text-base md:px-4 px-[20px] md:pt-12 py-[20px] md:pb-[50px] border-t">
                 <div className="max-w-10xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
                     {/* Company Info */}
                     <div className="md:space-y-7 space-y-4 col-span-2">
-                        <img src="/logo.png" alt="Liveupx" className="md:h-14 h-8" />
+                        <img src="/liveupx.png" alt="Liveupx" className="xl:h-[70px] h-8" />
                         <p className="md:text-sm text-[10px] text-justify">
                             Liveupx is a global IT services, consulting, and business solutions organization helping enterprises navigate their digital transformation.
                         </p>
 
                         <div className="md:space-y-4 space-y-2">
-                            <p className="flex md:text-sm text-[10px] items-center gap-2">
+                            <div className="flex md:text-sm text-[10px] items-center gap-2">
                                 <span className="md:text-xl text-[10px] text-gray-600">
                                     <CiLocationOn />
                                 </span>
-                                F86G+92X, Knowledge Park I, Greater Noida, Uttar Pradesh 201310, India
-                            </p>
-                            <p className="flex md:text-sm items-center text-[10px] gap-2">
+                                Blasewitzer Str. 12, 01307 Dresden, Germany
+                            </div>
+                            <div className="flex md:text-sm items-center text-[10px] gap-2">
                                 <span className="md:text-lg text-[10px] text-gray-600">
                                     <FiPhone />
                                 </span>
-                                +91-70603-71701
-                            </p>
+                                +49-17671523951
+
+                            </div>
+
+                            <div className="flex md:text-sm items-center text-[10px] gap-2">
+                                <span className="md:text-lg text-[10px] text-gray-600">
+                                    <MdOutlineMailOutline />
+                                </span>
+                                <p>davide@liveupx.eu</p>
+                            </div>
+
+
                         </div>
-                        <div className="md:space-y-4 space-y-2 md:text-sm text-[10px]">
-                            <p>✉ help@liveupx.com</p>
-                            <p>✉ info@liveupx.com</p>
-                        </div>
+
+
                     </div>
 
                     {/* What We Do */}
-                    <div className="md:space-y-7 space-y-1 text-[10px] sm:text-sm">
+                    <div className="md:space-y-7 space-y-1 text-sm">
                         <h4 className="font-semibold text-black">What We Do</h4>
                         {[
                             "Digital Transformation",
@@ -614,8 +630,48 @@ function Home() {
                     </div>
                 </div>
 
+                <section className="flex flex-col gap-6 justify-center items-center">
+                    <p className="text-black xl:text-xl text-sm text-center  font-semibold leading-relaxed">
+                        This platform is a joint venture of Liveupx India, OneBanking, and Foxx Group Corporation.
+                    </p>
+
+                    <ul className="text-sm xl:space-x-10 space-x-5 flex text-gray-400">
+                        <li className="flex items-center gap-3">
+                            <img
+                                src="/footerlogo/live.png"
+                                alt="Liveupx India Logo"
+                                className="xl:h-9 h-3 w-auto object-contain"
+                                loading="lazy"
+                            />
+
+                        </li>
+                        <li className="flex items-center gap-3">
+                            <img
+                                src="/footerlogo/foxx2.png"
+                                alt="Foxx Group Corporation Logo"
+                                className="xl:h-9 h-3 w-auto object-contain"
+                                loading="lazy"
+                            />
+
+                        </li>
+                        <li className="flex items-center gap-3">
+                            <img
+                                src="/footerlogo/onebanking.svg"
+                                alt="OneBanking Logo"
+                                className="xl:h-9 h-3 w-auto object-contain"
+                                loading="lazy"
+                            />
+
+                        </li>
+
+                    </ul>
+
+
+
+                </section>
+
                 {/* Bottom Section */}
-                <hr className="border-t border-gray-00 my-8" />
+                <hr className="border-t border-gray-00 " />
 
                 <div className="mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 text-xs sm:text-sm">
                     <div className="md:space-y-2 space-y-1 text-center md:text-left">
@@ -634,7 +690,7 @@ function Home() {
                     </div>
                 </div>
 
-                <hr className="border-t border-gray-300 my-8" />
+                <hr className="border-t border-gray-300 " />
 
                 <div className="space-y-3 text-[11px] sm:text-sm leading-relaxed text-justify break-words px-2 sm:px-0">
                     <p>

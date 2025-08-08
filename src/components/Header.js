@@ -23,9 +23,9 @@ function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/logo.png" 
+              src="/liveupx.png" 
               alt="LiveupX Logo" 
-              className="md:h-[50px] h-[40px] cursor-pointer"
+              className="xl:h-[60px] h-[50px] cursor-pointer"
               onClick={() => scrollToSection('home')}
             />
           </div>
