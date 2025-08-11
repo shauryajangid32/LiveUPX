@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from 'react';
 import { IoChatbubblesOutline } from "react-icons/io5";
+import FadeInSection from '../components/FadeInSection';
+
 import {
     MdOutlineDevices,
     MdOutlineSystemUpdateAlt,
@@ -24,23 +26,32 @@ import { LuFactory } from "react-icons/lu";
 import { CiLocationOn } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineMailOutline } from "react-icons/md";
+import Modal from '../components/Modal';
+import ContactForm from '../components/ContactForm';
 function Home() {
-    // Scroll to section function
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            // Handle form submission logic here
+            console.log("Form submitted");
+            setIsModalOpen(false); // Close the modal after submission
+        };
     };
 
     return (
         <>
-            {/* first section - Hero */}
+            {/* first section*/}
             <div
                 id="home"
                 className="h-screen max-w-screen flex flex-col items-center justify-center bg-cover bg-center"
                 style={{ backgroundImage: `url(/bgg.png)` }}
             >
+
                 <div className="flex pt-[40px] flex-col items-center md:space-y-[50px] space-y-[70px] justify-center">
                     <h1 className="lg:text-[55px] text-shadow-lg lg:max-w-5xl md:text-4xl text-3xl font-aeion text-center text-white drop-shadow-xl font-bold px-10 sm:px-[16px] lg:space-y-3">
                         <h1>TRANSFORM LEGACY SYSTEMS INTO</h1> <h1>MODERN ENTERPRISE SOLUTIONS</h1>
@@ -53,12 +64,25 @@ function Home() {
                     </span>
                 </div>
 
+
                 {/* Chat Icon */}
-                <div className="fixed z-[9999] bottom-5 md:hover:shadow-xl right-5 bg-purple-700 text-white p-4 rounded-full lg:text-3xl text-xl cursor-pointer hover:bg-purple-800 transition duration-300">
-                    <IoChatbubblesOutline />
+                <div className="fixed z-[9999] bottom-5 right-5">
+                    <div className="relative group">
+                        <div className="hidden group-hover:block absolute right-12 mb-2 w-max px-3 py-1 bg-green-700 text-white text-sm font-medium rounded-l-md rounded-tr-md shadow-lg ">
+                            Get your free proposal!
+                        </div>
+                        <div className="rounded-full cursor-pointer md:hover:shadow-xl">
+                            <img
+                                onClick={() => setIsModalOpen(true)}
+                                className="lg:h-[60px] rounded-full h-[50px] w-auto object-cover"
+                                src="/person.jpg"
+                                alt="Contact person"
+                            />
+                        </div>
+                    </div>
                 </div>
                 <div
-                    className="fixed z-[9999] bottom-24 md:hover:shadow-xl right-5 bg-purple-700 text-white p-4 rounded-full lg:text-3xl text-xl cursor-pointer hover:bg-purple-800 transition duration-300"
+                    className="fixed z-[9999] bottom-24 md:hover:shadow-xl right-5 bg-[#9CA3AF] text-white p-4 rounded-full lg:text-3xl text-xl cursor-pointer hover:bg-gray-950/70 transition duration-300"
                     onClick={() => window.location.href = "tel:+4917671523951"}
                     title="Call +49 176 7152 3951"
                     aria-label="Call customer support"
@@ -68,6 +92,7 @@ function Home() {
             </div>
 
             {/* Second Section - About */}
+
             <h1
                 id="about"
                 className="lg:text-[65px]  md:text-[40px] max-w-screen leading-10 text-center text-[25px] lg:h-screen md:leading-tight md:py-[50px] md:px-[40px] px-[20px] py-[50px] font-semibold font-aeion md:tracking-wider lg:text-left flex items-center md:justify-center"
@@ -75,7 +100,9 @@ function Home() {
                 Revitalize your business with scalable, secure, and efficient enterprise applications designed for the digital age.
             </h1>
 
+
             {/* third section - Services */}
+
             <div
                 id="services"
                 className="bg-gray-100 max-w-screen flex flex-col justify-center space-y-14 items-center md:py-[40px] md:px-4 px-[20px] py-[50px]"
@@ -137,10 +164,10 @@ function Home() {
                                 style={{ backgroundImage: `url(${item.image})` }}
                             >
                                 {/* Purple Overlay */}
-                                <div className="absolute inset-0 bg-purple-700/70 mix-blend-overlay brightness-110"></div>
+                                <div className="absolute inset-0 bg-gray-300/70 mix-blend-overlay brightness-110"></div>
 
                                 {/* Gradient Overlay from bottom */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent p-4 text-white flex flex-col justify-end">
+                                <div className="absolute inset-0 bg-gradient-to-t from-gray-800/90 to-transparent p-4 text-white flex flex-col justify-end">
                                     <div className="flex items-center gap-2 font-semibold">
                                         <span style={{ backgroundColor: "#D9D9D9" }} className="p-2 rounded-full">
                                             {item.icon}
@@ -165,7 +192,9 @@ function Home() {
                 </h1>
             </div>
 
+
             {/* fourth section */}
+
             <div className="flex max-w-screen items-center lg:h-screen">
                 <div className="md:py-[50px] md:px-[40px] px-[20px] py-[50px]">
                     <h1 className="lg:text-[60px] md:text-[40px] leading-10 text-[25px] font-semibold font-aeion lg:text-left text-center md:leading-tight tracking-wider">LiveUpX</h1>
@@ -175,12 +204,14 @@ function Home() {
                 </div>
             </div>
 
+
             {/* fifth section - Portfolio */}
+
             <div
                 id="portfolio"
-                className="bg-gray-100 max-w-screen flex flex-col justify-center md:space-y-14 space-y-5 items-center md:py-[80px] py-[50px] px-[20px] md:px-4"
+                className="bg-gray-100 lg:h-screen max-w-screen flex flex-col justify-center md:space-y-14 space-y-5 items-center md:py-[80px] py-[50px] px-[20px] md:px-4"
             >
-                <div className="max-w-7xl w-full   flex flex-col justify-center items-center text-center">
+                <div className=" w-full   flex flex-col justify-center items-center text-center">
                     <h1 className="lg:text-[55px] md:text-[40px] text-[25px] font-semibold lg:tracking-wider font-aeion">By the numbers</h1>
                     <p className="text-gray-400 lg:text-lg md:text-sm text-xs font-normal max-w-2xl">
                         Delivering exceptional solutions across the globe with proven results and satisfied clients.
@@ -225,7 +256,9 @@ function Home() {
                 </p>
             </div>
 
+
             {/* sixth section - Case Studies */}
+
             <div
                 id="case-studies"
                 className="flex flex-col max-w-screen justify-center md:space-y-14 space-y-5 items-center md:py-[80px] md:px-4 px-[20px] py-[50px]"
@@ -281,20 +314,24 @@ function Home() {
                                 <LuShield className="text-purple-700 md:w-5 md:h-5 w-5 h-5" />
                             </div>
                             <h3 className="md:text-xl text-sm font-semibold text-black mb-2">{item.title}</h3>
-                            <p className="text-gray-400 text-[10px] md:text-[15px]">{item.description}</p>
+                            <p className="text-gray-400 text-sm sm:text-base">{item.description}</p>
                         </div>
                     ))}
                 </div>
             </div>
 
+
             {/* seventh section */}
-            <div className="lg:h-screen max-w-screen flex items-center">
-                <h1 className="lg:text-[65px] md:text-[40px] text-[25px] bg-gray-100 md:leading-tight md:p-[40px] md:py-[50px] px-[20px] py-[50px] leading-10 font-semibold font-aeion text-center lg:text-left">
+
+            <div className="lg:h-screen max-w-screen bg-gray-100 flex items-center">
+                <h1 className="lg:text-[65px] md:text-[40px] text-[25px]  md:leading-tight md:px-[40px] md:py-[50px] px-[20px] py-[50px] leading-10 font-semibold font-aeion text-center lg:text-left">
                     Liveupx is a global IT services, consulting, and business solutions organization helping enterprises navigate their digital transformation.
                 </h1>
             </div>
 
+
             {/* eighth section - About */}
+
             <div
                 id="about-company"
                 className="flex flex-col max-w-screen justify-center md:space-y-14 space-y-8 items-center md:py-[60px] py-[50px] px-[20px]"
@@ -359,10 +396,10 @@ function Home() {
                                 style={{ backgroundImage: `url(${item.image})` }}
                             >
                                 {/* Purple Overlay */}
-                                <div className="absolute inset-0 bg-purple-700/70 mix-blend-overlay brightness-110"></div>
+                                <div className="absolute inset-0 bg-gray-300/70 mix-blend-overlay brightness-110"></div>
 
                                 {/* Gradient Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent p-3 sm:p-4 text-white flex flex-col justify-end">
+                                <div className="absolute inset-0 bg-gradient-to-t from-gray-800/90 to-transparent p-3 sm:p-4 text-white flex flex-col justify-end">
                                     <div className="flex items-center gap-2 font-semibold text-sm sm:text-base">
                                         <span style={{ backgroundColor: "#D9D9D9" }} className="p-2 rounded-full">
                                             {item.icon}
@@ -390,7 +427,9 @@ function Home() {
                 </span>
             </div>
 
+
             {/* ninth section - Trusted by Industry Leaders */}
+
             <div className="bg-gray-100 md:h-screen max-w-screen flex items-center justify-center md:px-4 px-[20px] py-[50px]">
                 <div className="md:space-y-14 space-y-8 md:flex md:flex-col items-center justify-center w-full">
                     {/* Header Section */}
@@ -483,26 +522,42 @@ function Home() {
                 </div>
             </div>
 
+
             {/* tenth section - Contact */}
+
             <div
                 id="contact"
-                className="flex md:h-screen max-w-screen flex-col justify-center space-y-14 items-center md:py-[80px] py-[50px] md:px-4 px-[20px] bg-gradient-to-b from-white via-[#d8b4fe] to-[#a855f7]"
+                className="flex lg:h-screen flex-col items-center justify-center space-y-10 md:space-y-14 px-4 py-20 md:py-40 bg-gradient-to-br from-white to-purple-600"
             >
-                <div className="max-w-[1050px] w-full flex flex-col justify-center items-center text-center">
-                    <h1 className="md:text-[45px] lg:text-[60px] text-[25px] tracking-wider font-semibold font-aeion">
-                        Connect with us
+                <div className=" w-full flex flex-col items-center text-center space-y-4">
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tight text-gray-900 font-aeion">
+                        Connect with Us
                     </h1>
-                    <p className="text-gray-600 md:text-lg text-sm font-normal max-w-2xl">
-                        We're here to help. Contact us today to discuss your project, request a quote, or learn more about our services.
+                    <p className="text-gray-600 text-base md:text-lg font-normal max-w-2xl">
+                        We're here to help you bring your ideas to life. Contact us today to discuss your project, request a quote, or learn more about our services.
                     </p>
                 </div>
 
-                <span className="bg-[#714cc9] text-white md:text-base text-xs font-aeion md:px-20 px-5 md:py-4 py-2 rounded-full cursor-pointer hover:bg-[#5f34a8] md:hover:shadow-xl transition duration-300">
+                <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="bg-[#714cc9] text-white text-base md:text-lg font-semibold font-aeion px-10 md:px-20 py-4 rounded-full cursor-pointer hover:bg-[#5f34a8] transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                >
                     Get in touch
-                </span>
+                </button>
             </div>
 
+            {/* Modal for contact form */}
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                <ContactForm onSubmit={(formData) => {
+                    console.log('Form submitted:', formData);
+                    // Here you would typically make an API call to submit the form
+                    setIsModalOpen(false); // Close modal after submission
+                    alert('Thank you for your message! We will get back to you soon.');
+                }} />
+            </Modal>
+
             {/* eleventh section - Footer */}
+
             <footer className="bg-gray-100 space-y-10 max-w-screen text-gray-400 md:text-base md:px-4 px-[20px] md:pt-12 py-[20px] md:pb-[50px] border-t">
                 <div className="max-w-10xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-8">
                     {/* Company Info */}
@@ -701,6 +756,7 @@ function Home() {
                     </p>
                 </div>
             </footer>
+
         </>
     );
 }
