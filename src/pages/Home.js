@@ -42,7 +42,7 @@ function Home() {
                 style={{ backgroundImage: `url(/bgg.png)` }}
             >
                 <div className="flex pt-[40px] flex-col items-center md:space-y-[50px] space-y-[70px] justify-center">
-                    <h1 className="xl:text-[55px] text-shadow-lg xl:max-w-5xl md:text-4xl text-3xl font-aeion text-center text-white drop-shadow-xl font-bold px-10 sm:px-[16px] xl:space-y-3">
+                    <h1 className="lg:text-[55px] text-shadow-lg lg:max-w-5xl md:text-4xl text-3xl font-aeion text-center text-white drop-shadow-xl font-bold px-10 sm:px-[16px] lg:space-y-3">
                         <h1>TRANSFORM LEGACY SYSTEMS INTO</h1> <h1>MODERN ENTERPRISE SOLUTIONS</h1>
                     </h1>
                     <span
@@ -54,11 +54,11 @@ function Home() {
                 </div>
 
                 {/* Chat Icon */}
-                <div className="fixed z-[9999] bottom-5 md:hover:shadow-xl right-5 bg-purple-700 text-white p-4 rounded-full xl:text-3xl text-xl cursor-pointer hover:bg-purple-800 transition duration-300">
+                <div className="fixed z-[9999] bottom-5 md:hover:shadow-xl right-5 bg-purple-700 text-white p-4 rounded-full lg:text-3xl text-xl cursor-pointer hover:bg-purple-800 transition duration-300">
                     <IoChatbubblesOutline />
                 </div>
                 <div
-                    className="fixed z-[9999] bottom-24 md:hover:shadow-xl right-5 bg-purple-700 text-white p-4 rounded-full xl:text-3xl text-xl cursor-pointer hover:bg-purple-800 transition duration-300"
+                    className="fixed z-[9999] bottom-24 md:hover:shadow-xl right-5 bg-purple-700 text-white p-4 rounded-full lg:text-3xl text-xl cursor-pointer hover:bg-purple-800 transition duration-300"
                     onClick={() => window.location.href = "tel:+4917671523951"}
                     title="Call +49 176 7152 3951"
                     aria-label="Call customer support"
@@ -70,7 +70,7 @@ function Home() {
             {/* Second Section - About */}
             <h1
                 id="about"
-                className="xl:text-[65px] md:text-[50px] max-w-screen leading-10 text-center text-[25px] md:h-screen md:leading-tight md:py-[100px] md:px-[80px] px-[20px] py-[50px] font-semibold font-aeion md:tracking-wider xl:text-left flex items-center md:justify-center"
+                className="lg:text-[65px]  md:text-[40px] max-w-screen leading-10 text-center text-[25px] lg:h-screen md:leading-tight md:py-[50px] md:px-[40px] px-[20px] py-[50px] font-semibold font-aeion md:tracking-wider lg:text-left flex items-center md:justify-center"
             >
                 Revitalize your business with scalable, secure, and efficient enterprise applications designed for the digital age.
             </h1>
@@ -80,9 +80,9 @@ function Home() {
                 id="services"
                 className="bg-gray-100 max-w-screen flex flex-col justify-center space-y-14 items-center md:py-[40px] md:px-4 px-[20px] py-[50px]"
             >
-                <div className="w-full flex flex-col justify-center items-center text-center xl:space-y-5">
-                    <h1 className="xl:text-[55px] md:text-[40px] text-[25px] xl:tracking-wider font-semibold font-aeion">Services</h1>
-                    <p className="text-gray-400 xl:text-lg md:text-sm text-xs max-w-2xl">
+                <div className="w-full flex flex-col justify-center items-center text-center ">
+                    <h1 className="lg:text-[55px] md:text-[40px] text-[25px] lg:tracking-wider font-semibold font-aeion">Services</h1>
+                    <p className="text-gray-400 lg:text-lg md:text-sm text-xs max-w-2xl">
                         We deliver end-to-end software solutions that solve complex business challenges and drive digital transformation.
                     </p>
                 </div>
@@ -166,10 +166,10 @@ function Home() {
             </div>
 
             {/* fourth section */}
-            <div className="flex max-w-screen items-center md:h-screen">
-                <div className="md:py-[100px] md:px-[80px] px-[20px] py-[50px]">
-                    <h1 className="xl:text-[60px] md:text-[40px] leading-10 text-[25px] font-semibold font-aeion xl:text-left text-center md:leading-tight tracking-wider">LiveUpX</h1>
-                    <h1 className="xl:text-[60px] md:text-[40px] leading-10 text-[25px] md:leading-tight font-semibold font-aeion tracking-wider xl:text-left text-center">
+            <div className="flex max-w-screen items-center lg:h-screen">
+                <div className="md:py-[50px] md:px-[40px] px-[20px] py-[50px]">
+                    <h1 className="lg:text-[60px] md:text-[40px] leading-10 text-[25px] font-semibold font-aeion lg:text-left text-center md:leading-tight tracking-wider">LiveUpX</h1>
+                    <h1 className="lg:text-[60px] md:text-[40px] leading-10 text-[25px] md:leading-tight font-semibold font-aeion tracking-wider lg:text-left text-center">
                         provides full-cycle software development, AI solutions, cloud & DevOps, cybersecurity, and data analytics services for modern enterprises across Europe.
                     </h1>
                 </div>
@@ -180,9 +180,9 @@ function Home() {
                 id="portfolio"
                 className="bg-gray-100 max-w-screen flex flex-col justify-center md:space-y-14 space-y-5 items-center md:py-[80px] py-[50px] px-[20px] md:px-4"
             >
-                <div className="max-w-7xl w-full xl:space-y-4 flex flex-col justify-center items-center text-center">
-                    <h1 className="xl:text-[55px] md:text-[40px] text-[25px] font-semibold xl:tracking-wider font-aeion">By the numbers</h1>
-                    <p className="text-gray-400 xl:text-lg md:text-sm text-xs font-normal max-w-2xl">
+                <div className="max-w-7xl w-full   flex flex-col justify-center items-center text-center">
+                    <h1 className="lg:text-[55px] md:text-[40px] text-[25px] font-semibold lg:tracking-wider font-aeion">By the numbers</h1>
+                    <p className="text-gray-400 lg:text-lg md:text-sm text-xs font-normal max-w-2xl">
                         Delivering exceptional solutions across the globe with proven results and satisfied clients.
                     </p>
                 </div>
@@ -230,9 +230,9 @@ function Home() {
                 id="case-studies"
                 className="flex flex-col max-w-screen justify-center md:space-y-14 space-y-5 items-center md:py-[80px] md:px-4 px-[20px] py-[50px]"
             >
-                <div className="max-w-[1050px] xl:space-y-4 w-full flex flex-col justify-center items-center text-center">
-                    <h1 className="xl:text-[55px] md:text-[40px] text-[25px] xl:tracking-wider font-semibold font-aeion">Why Liveupx</h1>
-                    <p className="text-gray-400 xl:text-lg md:text-sm text-xs font-normal max-w-2xl">
+                <div className="   w-full flex flex-col justify-center items-center text-center">
+                    <h1 className="lg:text-[55px] md:text-[40px] text-[25px] lg:tracking-wider font-semibold font-aeion">Why Liveupx</h1>
+                    <p className="text-gray-400 lg:text-lg md:text-sm text-xs font-normal max-w-2xl">
                         We combine technical excellence with strategic insight to deliver solutions that drive business growth.
                     </p>
                 </div>
@@ -288,8 +288,8 @@ function Home() {
             </div>
 
             {/* seventh section */}
-            <div className="md:h-screen max-w-screen flex items-center">
-                <h1 className="xl:text-[65px] md:text-[40px] text-[25px] bg-gray-100 md:leading-tight md:p-[80px] px-[20px] py-[50px] leading-10 font-semibold font-aeion text-center xl:text-left">
+            <div className="lg:h-screen max-w-screen flex items-center">
+                <h1 className="lg:text-[65px] md:text-[40px] text-[25px] bg-gray-100 md:leading-tight md:p-[40px] md:py-[50px] px-[20px] py-[50px] leading-10 font-semibold font-aeion text-center lg:text-left">
                     Liveupx is a global IT services, consulting, and business solutions organization helping enterprises navigate their digital transformation.
                 </h1>
             </div>
@@ -300,11 +300,11 @@ function Home() {
                 className="flex flex-col max-w-screen justify-center md:space-y-14 space-y-8 items-center md:py-[60px] py-[50px] px-[20px]"
             >
                 {/* Heading */}
-                <div className="w-full flex flex-col justify-center items-center text-center xl:space-y-5">
-                    <h1 className="xl:text-[55px] md:text-[40px] text-2xl tracking-wider font-semibold font-aeion">
+                <div className="w-full flex flex-col justify-center items-center text-center  ">
+                    <h1 className="lg:text-[55px] md:text-[40px] text-[25px] tracking-wider font-semibold font-aeion">
                         Industries
                     </h1>
-                    <p className="text-gray-400 xl:text-lg md:text-sm text-xs max-w-2xl">
+                    <p className="text-gray-400 lg:text-lg md:text-sm text-xs max-w-2xl">
                         We deliver customized digital solutions to address unique challenges across various industries.
                     </p>
                 </div>
@@ -373,7 +373,7 @@ function Home() {
                             </div>
 
                             {/* Text Section */}
-                            <div className="p-4 sm:p-5 bg-gray-100">
+                            <div className="p-4 sm:p-5 md:p-4 bg-gray-100">
                                 <p className="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">{item.desc}</p>
                                 <span className="text-blue-600 text-sm sm:text-base font-medium cursor-pointer hover:underline flex items-center gap-1">
                                     Learn More →
@@ -394,11 +394,11 @@ function Home() {
             <div className="bg-gray-100 md:h-screen max-w-screen flex items-center justify-center md:px-4 px-[20px] py-[50px]">
                 <div className="md:space-y-14 space-y-8 md:flex md:flex-col items-center justify-center w-full">
                     {/* Header Section */}
-                    <div className=" w-full flex flex-col xl:space-y-5 justify-center items-center text-center px-2">
-                        <h1 className="text-sm md:text-[40px] xl:text-[50px] font-semibold font-aeion xl:tracking-wider">
+                    <div className=" w-full flex flex-col justify-center items-center text-center ">
+                        <h1 className="lg:text-[55px] md:text-[40px] text-[25px] lg:tracking-wider font-semibold font-aeion">
                             Trusted by Industry Leaders
                         </h1>
-                        <p className="text-gray-500 text-xs md:text-sm xl:text-lg font-normal max-w-2xl">
+                        <p className="text-gray-500 text-xs md:text-sm lg:text-lg font-normal max-w-2xl">
                             We've partnered with innovative organizations across multiple industries to deliver exceptional digital solutions.
                         </p>
                     </div>
@@ -467,7 +467,7 @@ function Home() {
                                             key={`${i}-${idx}`}
                                             className="mx-4 w-[150px] sm:w-[200px] shrink-0"
                                         >
-                                            <div className="bg-white cursor-pointer overflow-hidden shadow-md hover:shadow-xl rounded-xl flex items-center justify-center h-[80px] sm:h-[100px] transform transition-transform duration-300 hover:scale-105">
+                                            <div className="bg-blue-100 cursor-pointer overflow-hidden shadow-md hover:shadow-xl rounded-xl flex items-center justify-center h-[80px] sm:h-[100px] transform transition-transform duration-300 hover:scale-105">
                                                 <img
                                                     src={logoPath}
                                                     alt="Company logo"
@@ -489,7 +489,7 @@ function Home() {
                 className="flex md:h-screen max-w-screen flex-col justify-center space-y-14 items-center md:py-[80px] py-[50px] md:px-4 px-[20px] bg-gradient-to-b from-white via-[#d8b4fe] to-[#a855f7]"
             >
                 <div className="max-w-[1050px] w-full flex flex-col justify-center items-center text-center">
-                    <h1 className="md:text-[45px] text-[25px] tracking-wider font-semibold font-aeion mb-4">
+                    <h1 className="md:text-[45px] lg:text-[60px] text-[25px] tracking-wider font-semibold font-aeion">
                         Connect with us
                     </h1>
                     <p className="text-gray-600 md:text-lg text-sm font-normal max-w-2xl">
@@ -504,10 +504,10 @@ function Home() {
 
             {/* eleventh section - Footer */}
             <footer className="bg-gray-100 space-y-10 max-w-screen text-gray-400 md:text-base md:px-4 px-[20px] md:pt-12 py-[20px] md:pb-[50px] border-t">
-                <div className="max-w-10xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div className="max-w-10xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-8">
                     {/* Company Info */}
                     <div className="md:space-y-7 space-y-4 col-span-2">
-                        <img src="/liveupx.png" alt="Liveupx" className="xl:h-[70px] h-8" />
+                        <img src="/liveupx.png" alt="Liveupx" className="lg:h-[70px] md:h-12 h-8" />
                         <p className="md:text-sm text-[10px] text-justify">
                             Liveupx is a global IT services, consulting, and business solutions organization helping enterprises navigate their digital transformation.
                         </p>
@@ -541,7 +541,7 @@ function Home() {
                     </div>
 
                     {/* What We Do */}
-                    <div className="md:space-y-7 space-y-1 text-sm">
+                    <div className="md:space-y-7 space-y-1 text-[10px] md:text-sm">
                         <h4 className="font-semibold text-black">What We Do</h4>
                         {[
                             "Digital Transformation",
@@ -631,16 +631,16 @@ function Home() {
                 </div>
 
                 <section className="flex flex-col gap-6 justify-center items-center">
-                    <p className="text-black xl:text-xl text-sm text-center  font-semibold leading-relaxed">
+                    <p className="text-black lg:text-xl text-sm text-center  font-semibold leading-relaxed">
                         This platform is a joint venture of Liveupx India, OneBanking, and Foxx Group Corporation.
                     </p>
 
-                    <ul className="text-sm xl:space-x-10 space-x-5 flex text-gray-400">
+                    <ul className="text-sm lg:space-x-10 space-x-5 flex text-gray-400">
                         <li className="flex items-center gap-3">
                             <img
                                 src="/footerlogo/live.png"
                                 alt="Liveupx India Logo"
-                                className="xl:h-9 h-3 w-auto object-contain"
+                                className="lg:h-9 md:h-6 h-3 w-auto object-contain"
                                 loading="lazy"
                             />
 
@@ -649,7 +649,7 @@ function Home() {
                             <img
                                 src="/footerlogo/foxx2.png"
                                 alt="Foxx Group Corporation Logo"
-                                className="xl:h-9 h-3 w-auto object-contain"
+                                className="lg:h-9 md:h-6 h-3 w-auto object-contain"
                                 loading="lazy"
                             />
 
@@ -658,7 +658,7 @@ function Home() {
                             <img
                                 src="/footerlogo/onebanking.svg"
                                 alt="OneBanking Logo"
-                                className="xl:h-9 h-3 w-auto object-contain"
+                                className="lg:h-9 md:h-6 h-3 w-auto object-contain"
                                 loading="lazy"
                             />
 
@@ -673,10 +673,10 @@ function Home() {
                 {/* Bottom Section */}
                 <hr className="border-t border-gray-00 " />
 
-                <div className="mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 text-xs sm:text-sm">
-                    <div className="md:space-y-2 space-y-1 text-center md:text-left">
-                        <h1 className="text-gray-600 text-[10px] xl:text-sm">© 2025 All rights are reserved by Liveupx Private Limited</h1>
-                        <span className="flex text-[10px] xl:text-sm text-gray-400 flex-wrap justify-center md:justify-start gap-2 sm:gap-4">
+                <div className="mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 ">
+                    <div className="md:space-y-2 space-y-1 text-[8px] md:text-[10px] lg:text-sm text-center md:text-left">
+                        <h1 className="text-gray-600 ">© 2025 All rights are reserved by Liveupx Private Limited</h1>
+                        <span className="flex  text-gray-400 flex-wrap justify-center md:justify-start gap-2 sm:gap-4">
                             <h1>Registration Nu:136527</h1>
                             <h1>CIN: 072200UP2020PTC136527</h1>
                         </span>
@@ -692,7 +692,7 @@ function Home() {
 
                 <hr className="border-t border-gray-300 " />
 
-                <div className="space-y-3 text-[11px] sm:text-sm leading-relaxed text-justify break-words px-2 sm:px-0">
+                <div className="space-y-3 text-[8px] md:text-[10px] lg:text-sm leading-relaxed text-justify break-words px-2 sm:px-0">
                     <p>
                         <span className="text-gray-600 font-semibold">Disclaimer:</span> The information provided on this website is for general informational purposes-only. While we strive to keep the information up to date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk. In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage or any loss or damage whatsoever arising from loss of data or profits arising out of or in connection with, the use of this website.
                     </p>

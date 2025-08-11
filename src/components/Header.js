@@ -31,7 +31,7 @@ function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex xl:mr-[150px] items-center space-x-10 font-bigshoulders font-medium xl:text-lg md:text-sm text-gray-100">
+          <nav className="hidden md:flex lg:mr-[150px] items-center space-x-10 font-bigshoulders font-medium lg:text-lg md:text-sm text-gray-100">
             <button onClick={() => scrollToSection('home')} className="hover:text-red-400 hover:underline tracking-widest transition">Home</button>
             <button onClick={() => scrollToSection('services')} className="hover:text-red-400 hover:underline tracking-widest transition">Services</button>
             <button onClick={() => scrollToSection('portfolio')} className="hover:text-red-400 hover:underline tracking-widest transition">Portfolio</button>
